@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD9BC742-4045-4060-AC07-63805198A59C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Goldsmith.My.MyApplication</StartupObject>
+    <RootNamespace>Goldsmith</RootNamespace>
+    <AssemblyName>Goldsmith</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>test.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Goldsmith.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Goldsmith.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.CalcEngine, Version=4.0.2012.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Excel, Version=4.0.2012.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.PDF, Version=1.0.2012.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.PluginCalendar.WinForms, Version=4.0.2009.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win, Version=4.0.2009.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Ink, Version=4.0.2000.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread, Version=4.0.2009.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread.Design, Version=4.0.2009.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.TextRenderer, Version=4.0.2000.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="SiRiDev, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\System32\SiRiDev.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="basFunc.vb" />
+    <Compile Include="frmA001Test.Designer.vb">
+      <DependentUpon>frmA001Test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmA001Test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmA002OK.Designer.vb">
+      <DependentUpon>frmA002OK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmA002OK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfig.designer.vb">
+      <DependentUpon>frmConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCtest.Designer.vb">
+      <DependentUpon>frmCtest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCtest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDdatatar.Designer.vb">
+      <DependentUpon>frmDdatatar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDdatatar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMasterBarcodeType.designer.vb">
+      <DependentUpon>frmMasterBarcodeType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMasterBarcodeType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMasterError.Designer.vb">
+      <DependentUpon>frmMasterError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMasterError.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintBarcode.Designer.vb">
+      <DependentUpon>frmPrintBarcode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintBarcode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessBarcode.Designer.vb">
+      <DependentUpon>frmProcessBarcode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessBarcode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessBarcodeADD.Designer.vb">
+      <DependentUpon>frmProcessBarcodeADD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessBarcodeADD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessCompleted.Designer.vb">
+      <DependentUpon>frmProcessCompleted.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessCompleted.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessCut.Designer.vb">
+      <DependentUpon>frmProcessCut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessCut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMasterDepartment.designer.vb">
+      <DependentUpon>frmMasterDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMasterDepartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMasterEmployee.designer.vb">
+      <DependentUpon>frmMasterEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMasterEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessReduce.designer.vb">
+      <DependentUpon>frmProcessReduce.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessReduce.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessNewJob.designer.vb">
+      <DependentUpon>frmProcessNewJob.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessNewJob.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessNewLOT.Designer.vb">
+      <DependentUpon>frmProcessNewLOT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessNewLOT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessStart.Designer.vb">
+      <DependentUpon>frmProcessStart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessStart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessKiln.Designer.vb">
+      <DependentUpon>frmProcessKiln.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessKiln.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessModify.Designer.vb">
+      <DependentUpon>frmProcessModify.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessModify.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessNewJob1.Designer.vb">
+      <DependentUpon>frmProcessNewJob1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessNewJob1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessSaw.Designer.vb">
+      <DependentUpon>frmProcessSaw.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessSaw.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessSend.Designer.vb">
+      <DependentUpon>frmProcessSend.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessSend.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessTimer.Designer.vb">
+      <DependentUpon>frmProcessTimer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessTimer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMasterUser.designer.vb">
+      <DependentUpon>frmMasterUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMasterUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.vb">
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessWeave.Designer.vb">
+      <DependentUpon>frmProcessWeave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessWeave.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessWeld.Designer.vb">
+      <DependentUpon>frmProcessWeld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessWeld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessWire.Designer.vb">
+      <DependentUpon>frmProcessWire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessWire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportAxtecvu.Designer.vb">
+      <DependentUpon>frmReportAxtecvu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportAxtecvu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportReduce.designer.vb">
+      <DependentUpon>frmReportReduce.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportReduce.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportKiln.designer.vb">
+      <DependentUpon>frmReportKiln.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportKiln.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportKiln2.designer.vb">
+      <DependentUpon>frmReportKiln2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportKiln2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportStart1.designer.vb">
+      <DependentUpon>frmReportStart1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportStart1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportWeave.designer.vb">
+      <DependentUpon>frmReportWeave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportWeave.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportSend.designer.vb">
+      <DependentUpon>frmReportSend.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportSend.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportModify.designer.vb">
+      <DependentUpon>frmReportModify.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportModify.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportStart2.Designer.vb">
+      <DependentUpon>frmReportStart2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportStart2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportUser.Designer.vb">
+      <DependentUpon>frmReportUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportSaw.designer.vb">
+      <DependentUpon>frmReportSaw.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportSaw.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportWeld.designer.vb">
+      <DependentUpon>frmReportWeld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportWeld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportWire.designer.vb">
+      <DependentUpon>frmReportWire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportWire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportCut.designer.vb">
+      <DependentUpon>frmReportCut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportCut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportWire2.designer.vb">
+      <DependentUpon>frmReportWire2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportWire2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportx.Designer.vb">
+      <DependentUpon>frmReportx.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportx.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearch.designer.vb">
+      <DependentUpon>frmSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTestNoOK.Designer.vb">
+      <DependentUpon>frmTestNoOK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTestNoOK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmConfig.resx">
+      <DependentUpon>frmConfig.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMasterBarcodeType.resx">
+      <DependentUpon>frmMasterBarcodeType.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintBarcode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrintBarcode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessBarcode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessBarcode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessBarcodeADD.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessBarcodeADD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessCut.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessCut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMasterDepartment.resx">
+      <DependentUpon>frmMasterDepartment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMasterEmployee.resx">
+      <DependentUpon>frmMasterEmployee.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessReduce.resx">
+      <DependentUpon>frmProcessReduce.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessNewJob.resx">
+      <DependentUpon>frmProcessNewJob.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessNewLOT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessNewLOT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessStart.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessStart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessKiln.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessKiln.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessModify.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessModify.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessNewJob1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessNewJob1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessSaw.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessSaw.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessSend.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessSend.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessTimer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessTimer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMasterUser.resx">
+      <DependentUpon>frmMasterUser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessWeave.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessWeave.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessWeld.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessWeld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessWire.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProcessWire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportReduce.resx">
+      <DependentUpon>frmReportReduce.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportKiln.resx">
+      <DependentUpon>frmReportKiln.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportKiln2.resx">
+      <DependentUpon>frmReportKiln2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportStart1.resx">
+      <DependentUpon>frmReportStart1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportWeave.resx">
+      <DependentUpon>frmReportWeave.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportSend.resx">
+      <DependentUpon>frmReportSend.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportModify.resx">
+      <DependentUpon>frmReportModify.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportStart2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmReportStart2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportUser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmReportUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportSaw.resx">
+      <DependentUpon>frmReportSaw.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportWeld.resx">
+      <DependentUpon>frmReportWeld.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportWire.resx">
+      <DependentUpon>frmReportWire.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportCut.resx">
+      <DependentUpon>frmReportCut.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportWire2.resx">
+      <DependentUpon>frmReportWire2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearch.resx">
+      <DependentUpon>frmSearch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="OpcEnumLib">
+      <Guid>{13486D43-4821-11D2-A494-3CB306C10000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
